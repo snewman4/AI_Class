@@ -1,0 +1,125 @@
+Test 1 - Full Board
+.\maxconnect4.exe one-move .\test1.txt .\output.txt 16
+
+The program will print out the current board and the current score.
+It will not change output.txt.
+Expected Output:
+
+   1   2   3   4   5   6   7
+  ___________________________
+ | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+ | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+ | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+ | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+ | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+ | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+Score: 25
+
+
+Test 2 - Almost Full Board, Two Open Spots
+.\maxconnect4.exe one-move .\test2.txt .\output.txt 16
+
+The program will print the current board and the current score.
+It will then print the expected utility for the end of the game,
+the position that the computer chose, and the new board state
+and new board score. output.txt will reflect the new board state.
+Expected Output:
+
+   1   2   3   4   5   6   7
+  ___________________________
+ | 1 | 1 | 1 |   | 1 |   | 1 |
+ | 1 | 1 | 2 | 2 | 2 | 2 | 2 |
+ | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+ | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+ | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+ | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+Score: 18
+
+Expected Utility: 19
+Computer chose 4
+   1   2   3   4   5   6   7
+  ___________________________
+ | 1 | 1 | 1 | 1 | 1 |   | 1 |
+ | 1 | 1 | 2 | 2 | 2 | 2 | 2 |
+ | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+ | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+ | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+ | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+Score: 19
+
+
+Test 3 - Empty Board
+.\maxconnect4.exe one-move .\test3.txt .\output.txt 16
+
+The program will print the current board and the current score.
+It will then print the expected utility for the end of the game,
+the position that the computer chose, and the new board state
+and new board score. output.txt will reflect the new board state.
+Note that this test will take about 30 seconds to run.
+Expected Output:
+
+   1   2   3   4   5   6   7
+  ___________________________
+ |   |   |   |   |   |   |   |
+ |   |   |   |   |   |   |   |
+ |   |   |   |   |   |   |   |
+ |   |   |   |   |   |   |   |
+ |   |   |   |   |   |   |   |
+ |   |   |   |   |   |   |   |
+Score: 0
+
+Expected Utility: 2
+Computer chose 1
+   1   2   3   4   5   6   7
+  ___________________________
+ |   |   |   |   |   |   |   |
+ |   |   |   |   |   |   |   |
+ |   |   |   |   |   |   |   |
+ |   |   |   |   |   |   |   |
+ |   |   |   |   |   |   |   |
+ | 1 |   |   |   |   |   |   |
+Score: 0
+
+
+Test 4 - Arbitrary Board Configuration
+.\maxconnect4.exe one-move .\test4.txt .\output.txt 16
+
+The program will print the current board and the current score.
+It will then print the expected utility for the end of the game,
+the position that the computer chose, and the new board state
+and new board score. output.txt will reflect the new board state.
+Expected Output:
+
+   1   2   3   4   5   6   7
+  ___________________________
+ |   |   |   |   |   |   |   |
+ |   |   |   |   |   |   |   |
+ |   | 2 |   |   |   |   |   |
+ |   | 1 |   |   |   |   | 2 |
+ |   | 2 |   |   | 1 | 1 | 1 |
+ | 1 | 1 |   |   | 2 | 2 | 2 |
+Score: 0
+
+Expected Utility: 4
+Computer chose 1
+   1   2   3   4   5   6   7
+  ___________________________
+ |   |   |   |   |   |   |   |
+ |   |   |   |   |   |   |   |
+ |   | 2 |   |   |   |   |   |
+ |   | 1 |   |   |   |   | 2 |
+ | 1 | 2 |   |   | 1 | 1 | 1 |
+ | 1 | 1 |   |   | 2 | 2 | 2 |
+Score: 0
+
+
+Test 5 - Invalid Board Configuration
+.\maxconnect4.exe one-move .\test5.txt .\output.txt 16
+
+The program will identify that the board is not configured in a
+valid way, will print out an error message, and will exit.
+output.txt will not be changed.
+Expected Output:
+
+Column 2 has a floating piece.
+Please ensure that the game board follows the expected format.

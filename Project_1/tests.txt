@@ -1,0 +1,99 @@
+Tests on input1.txt:
+
+Test 1 - No Route Between Cities:
+.\find_route.exe .\input1.txt London Frankfurt
+
+distance: infinity
+route:
+none
+
+Test 2 - Same Origin and Destination:
+.\find_route.exe .\input1.txt Bremen Bremen
+
+distance: 0 km
+route:
+Bremen to Bremen, 0 km
+
+Test 3 - Medium Route Between Origin and Destination:
+.\find_route.exe .\input1.txt Bremen Dresden
+
+distance: 524 km
+route:
+Bremen to Hannover, 132 km
+Hannover to Magdeburg, 148 km
+Magdeburg to Leipzig, 125 km
+Leipzig to Dresden, 119 km
+
+Test 4 - Short Route Between Origin and Destination:
+.\find_route.exe .\input1.txt London Manchester
+
+distance: 201 km
+route:
+London to Birmingham, 117 km
+Birmingham to Manchester, 84 km
+
+Test 5 - Long Route Between Origin and Destination:
+.\find_route.exe .\input1.txt Luebeck Munich
+
+distance: 923 km
+route:
+Luebeck to Hamburg, 63 km
+Hamburg to Hannover, 153 km
+Hannover to Magdeburg, 148 km
+Magdeburg to Leipzig, 125 km
+Leipzig to Nuremberg, 263 km
+Nuremberg to Munich, 171 km
+
+Test 6 - Cities Don't Exist in Input File:
+.\find_route.exe .\input1.txt Golden Aurora
+
+Golden was not found in .\input1.txt; please verify.
+
+
+Tests on input_custom.txt
+
+Test 1 - Adjacent Planets:
+.\find_route.exe .\input_custom.txt Hoth Coruscant
+
+distance: 41 km
+route:
+Hoth to Coruscant, 41 km
+
+Test 2 - The Same Planet:
+.\find_route.exe .\input_custom.txt Jakku Jakku
+
+distance: 0 km
+route:
+Jakku to Jakku, 0 km
+
+Test 3 - The Kessel Run:
+.\find_route.exe .\input_custom.txt Kessel SiKlaata
+
+distance: 12 km
+route:
+Kessel to SiKlaata, 12 km
+
+Test 4 - Across the Galaxy
+.\find_route.exe .\input_custom.txt Tatooine SiKlaata
+
+distance: 319 km
+route:
+Tatooine to Naboo, 27 km
+Naboo to Coruscant, 124 km
+Coruscant to Hoth, 41 km
+Hoth to Byss, 15 km
+Byss to Yavin_4, 19 km
+Yavin_4 to Dathomir, 69 km
+Dathomir to Kessel, 12 km
+Kessel to SiKlaata, 12 km
+
+Test 5 - The Original Trilogy Route
+.\find_route.exe .\input_custom.txt Yavin_4 Tatooine
+
+distance: 226 km
+route:
+Yavin_4 to Byss, 19 km
+Byss to Hoth, 15 km
+Hoth to Coruscant, 41 km
+Coruscant to Naboo, 124 km
+Naboo to Tatooine, 27 km

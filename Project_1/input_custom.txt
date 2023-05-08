@@ -1,0 +1,15 @@
+Naboo Tatooine 27
+Naboo Ryloth 31
+Naboo Coruscant 124
+Ryloth Coruscant 110
+Ryloth Batuu 89
+Batuu Jakku 12
+Coruscant Hoth 41
+Hoth Byss 15
+Byss Yavin_4 19
+Byss Mandalore 56
+Yavin_4 Dathomir 69
+Mandalore Dathomir 47
+Dathomir Kessel 12
+Kessel SiKlaata 12
+END OF INPUT
